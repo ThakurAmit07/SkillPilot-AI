@@ -1,32 +1,40 @@
-# Node / Frontend
-node_modules/
-dist/
-dist-ssr/
-*.local
+# Python & Environment
+venv/
+ENV/
+env/
 .env
-.env.*
-
-# Python / Backend & AI-ML
+.env.local
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
-venv/
-.venv/
-ENV/
-*.sqlite3
-.pytest_cache/
 
-# IDE & OS
+# Flask & Database
+instance/*.db
+instance/*.sqlite3
+instance/*.sqlite
+migrations/
+
+# File Uploads (Ignore actual uploaded resumes, preserve folder)
+uploads/resumes/*
+!uploads/resumes/.gitkeep
+
+# Testing & Logs
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# IDE & Operating System
 .DS_Store
-.idea/
 .vscode/*
 !.vscode/extensions.json
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.idea/
+*.swp
+*~
 
+# Frontend Node / Cache (From previous prototype)
+node_modules/
+dist/
+dist-ssr/

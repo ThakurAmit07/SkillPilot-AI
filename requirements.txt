@@ -1,0 +1,25 @@
+# SkillPilot AI — Core Dependencies
+# Fixed Technology Stack: Python Flask, SQLAlchemy, NLP, Gemini API, Pytest
+
+# Web Framework & ORM
+Flask>=3.0.0
+Flask-SQLAlchemy>=3.1.1
+Flask-Migrate>=4.0.7
+Flask-CORS>=4.0.1
+python-dotenv>=1.0.1
+Werkzeug>=3.0.3
+
+# NLP & Resume Text Extraction
+PyMuPDF>=1.24.0
+spacy>=3.7.4
+
+# Data Science & Machine Learning
+pandas>=2.2.2
+numpy>=1.26.4
+scikit-learn>=1.4.2
+
+# Generative AI (Server-Side Gemini Integration)
+google-generativeai>=0.8.3
+
+# Testing & Code Quality
+pytest>=8.2.0

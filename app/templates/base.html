@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillPilot AI — AI-Powered Student Skill, Career & Placement Readiness Platform">
+  <title>{% block title %}SkillPilot AI — Placement Readiness Platform{% endblock %}</title>
+
+  <!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Design Tokens & Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <!-- Global Top Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <a href="{{ url_for('main.index') }}" class="brand-logo">
+          <div class="logo-icon">🚀</div>
+          <div class="brand-text">
+            <span class="brand-title">SkillPilot AI</span>
+            <span class="brand-tag">Academic Edition</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#overview" class="nav-link active">Overview</a>
+        <a href="#modules" class="nav-link">Modules</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#docs" class="nav-link">Docs</a>
+      </nav>
+
+      <div class="header-actions">
+        <div id="system-status-badge" class="status-badge" title="Live Health Status">
+          <span class="pulse-dot"></span>
+          <span class="status-label">Checking API...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Viewport -->
+  <main class="app-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-meta">
+        <p class="footer-title"><strong>SkillPilot AI</strong> — Student Skill, Career & Placement Readiness Platform</p>
+        <p class="footer-subtitle">TEST → ANALYSE → DIAGNOSE → IMPROVE → RETEST → UPDATE PROFILE</p>
+      </div>
+      <div class="footer-team">
+        <span class="team-label">Development Team:</span>
+        <span class="team-names">Lakshya Khandelwal (Lead) • Amit Singh (Frontend) • Keshav Gupta (AI/ML)</span>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 SkillPilot AI. Developed for educational, skill-gap analysis and placement readiness benchmarking.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

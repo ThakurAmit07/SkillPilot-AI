@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}SkillPilot AI — System Foundation (Level 0){% endblock %}
+
+{% block content %}
+<section id="overview" class="hero-section">
+  <div class="hero-content">
+    <div class="badge-pill">
+      <span class="badge-icon">⚡</span>
+      <span>Level 0: Project Foundation Active</span>
+    </div>
+    <h1 class="hero-heading">
+      Evidence-Based Student Skill, Career & <span class="gradient-text">Placement Readiness</span> Platform
+    </h1>
+    <p class="hero-description">
+      Bridging the critical gap between what students <strong>claim on their resume</strong>, what they <strong>actually know</strong>, what they can <strong>practically demonstrate</strong>, and what the <strong>target industry requires</strong>.
+    </p>
+
+    <!-- Core Differentiator Callout -->
+    <div class="differentiator-banner">
+      <div class="diff-card">
+        <span class="diff-tag claimed">Claimed Skill</span>
+        <p>Mentioned in student resume or profile</p>
+      </div>
+      <div class="diff-arrow">➔</div>
+      <div class="diff-card">
+        <span class="diff-tag verified">Verified Skill</span>
+        <p>Proven via adaptive tests, coding & viva</p>
+      </div>
+      <div class="diff-arrow">➔</div>
+      <div class="diff-card">
+        <span class="diff-tag required">Job-Required Skill</span>
+        <p>Extracted from target Job Description</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- System Health & Environment Card -->
+<section class="section-container">
+  <div class="card status-panel">
+    <div class="card-header">
+      <h2 class="card-title">System Status & Environment Verification</h2>
+      <button id="refresh-health-btn" class="btn btn-secondary btn-sm">Refresh Status</button>
+    </div>
+    <div class="card-body">
+      <div class="status-grid">
+        <div class="status-item">
+          <span class="status-key">Application Status:</span>
+          <span id="health-status" class="status-val text-success">Checking...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-key">Architecture Pattern:</span>
+          <span class="status-val">Flask Application Factory</span>
+        </div>
+        <div class="status-item">
+          <span class="status-key">Database Support:</span>
+          <span class="status-val">PostgreSQL (SQLAlchemy ORM + SQLite Dev)</span>
+        </div>
+        <div class="status-item">
+          <span class="status-key">Continuous Cycle:</span>
+          <span class="status-val font-mono">TEST → ANALYSE → DIAGNOSE → IMPROVE → RETEST</span>
+        </div>
+      </div>
+      <div class="json-preview-container">
+        <div class="json-header">
+          <span>Live Endpoint: <code>/api/health</code></span>
+          <span class="badge badge-success">HTTP 200 OK</span>
+        </div>
+        <pre id="health-json-output" class="code-block">Loading health payload...</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Product Modules Grid -->
+<section id="modules" class="section-container">
+  <div class="section-header">
+    <h2 class="section-title">The 10 Core Product Modules</h2>
+    <p class="section-subtitle">Modular architecture ready for Level 1 through Level 9 implementation.</p>
+  </div>
+
+  <div class="modules-grid">
+    <div class="module-card">
+      <div class="module-num">01</div>
+      <h3 class="module-title">Resume Intelligence</h3>
+      <p class="module-desc">PyMuPDF + spaCy NLP extraction of claims, education, skills, and projects.</p>
+      <span class="badge badge-lead">Keshav / Amit</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">02</div>
+      <h3 class="module-title">Adaptive Skill Testing</h3>
+      <p class="module-desc">Dynamic topic-wise testing engine adjusting difficulty based on response accuracy.</p>
+      <span class="badge badge-lead">Keshav</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">03</div>
+      <h3 class="module-title">Practical Coding Assessment</h3>
+      <p class="module-desc">Isolated code execution environment with automated test-case evaluation.</p>
+      <span class="badge badge-lead">Keshav / Amit</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">04</div>
+      <h3 class="module-title">AI Mock Interview</h3>
+      <p class="module-desc">Gemini-powered technical & HR interview rounds tailored to student resume.</p>
+      <span class="badge badge-lead">Keshav</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">05</div>
+      <h3 class="module-title">Speech & Communication</h3>
+      <p class="module-desc">Analysis of speech pace, filler words, pause patterns, and clarity metrics.</p>
+      <span class="badge badge-lead">Keshav / Amit</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">06</div>
+      <h3 class="module-title">Presentation Analysis</h3>
+      <p class="module-desc">Observable visual stability and structured presentation delivery indicators.</p>
+      <span class="badge badge-lead">Amit / Keshav</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">07</div>
+      <h3 class="module-title">Project / Viva Mode</h3>
+      <p class="module-desc">In-depth technical architecture viva evaluating project claims and components.</p>
+      <span class="badge badge-lead">Keshav / Amit</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">08</div>
+      <h3 class="module-title">Job Description Analyzer</h3>
+      <p class="module-desc">Parses target job postings, maps requirements against student's verified skills.</p>
+      <span class="badge badge-lead">Keshav / Amit</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">09</div>
+      <h3 class="module-title">Placement Readiness Dashboard</h3>
+      <p class="module-desc">Transparent multi-factor placement readiness index with transparent scoring formulas.</p>
+      <span class="badge badge-lead">Amit</span>
+    </div>
+
+    <div class="module-card">
+      <div class="module-num">10</div>
+      <h3 class="module-title">AI Mentor & Next Best Action</h3>
+      <p class="module-desc">Generates explainable, actionable recommendations to resolve top pain points.</p>
+      <span class="badge badge-lead">Keshav / Amit</span>
+    </div>
+  </div>
+</section>
+
+<!-- Team Structure Section -->
+<section id="team" class="section-container">
+  <div class="section-header">
+    <h2 class="section-title">Development Team & Responsibilities</h2>
+    <p class="section-subtitle">Defined collaboration matrix for three college developers.</p>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="avatar-ring">LK</div>
+      <h3 class="member-name">Lakshya Khandelwal</h3>
+      <p class="member-role">Team Leader & Coordination</p>
+      <ul class="member-tasks">
+        <li>Project coordination & requirements</li>
+        <li>GitHub pull request reviews</li>
+        <li>Integration & testing supervision</li>
+        <li>Final presentation & mentor demo</li>
+      </ul>
+      <span class="branch-tag">Branch: main</span>
+    </div>
+
+    <div class="team-card active-card">
+      <div class="avatar-ring ring-accent">AS</div>
+      <h3 class="member-name">Amit Singh</h3>
+      <p class="member-role">Design, Frontend & Integration</p>
+      <ul class="member-tasks">
+        <li>UI/UX architecture & semantic templates</li>
+        <li>HTML5, CSS3, Vanilla JS, Chart.js</li>
+        <li>Responsive dashboards & forms</li>
+        <li>REST API integration & client validation</li>
+      </ul>
+      <span class="branch-tag branch-active">Branch: frontend (You)</span>
+    </div>
+
+    <div class="team-card">
+      <div class="avatar-ring ring-ai">KG</div>
+      <h3 class="member-name">Keshav Gupta</h3>
+      <p class="member-role">AI / ML & NLP Engineer</p>
+      <ul class="member-tasks">
+        <li>Resume parsing (PyMuPDF + spaCy)</li>
+        <li>Adaptive skill testing logic</li>
+        <li>Gemini API integration & mock interviews</li>
+        <li>Pain point detection & recommendation engine</li>
+      </ul>
+      <span class="branch-tag">Branch: ai-ml</span>
+    </div>
+  </div>
+</section>
+
+<!-- Documentation & Milestones Checklist -->
+<section id="docs" class="section-container">
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Level 0 Technical Deliverables Checklist</h2>
+    </div>
+    <div class="card-body">
+      <div class="checklist-grid">
+        <div class="check-item"><span class="check-icon">✓</span> <span>Clean Flask Application Factory (<code>create_app</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Configurable DB (PostgreSQL + SQLite Dev Fallback)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Environment Secret Management (<code>.env.example</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Automated Health Endpoint (<code>/api/health</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Architecture Specification (<code>docs/architecture.md</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Database Schema Design (<code>docs/database_design.md</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>REST API Specification (<code>docs/api_documentation.md</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Multi-Developer Git Workflow (<code>docs/git_workflow.md</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Task Ownership Matrix (<code>docs/task_ownership.md</code>)</span></div>
+        <div class="check-item"><span class="check-icon">✓</span> <span>Pytest Smoke Suite (<code>tests/test_basic.py</code>)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
